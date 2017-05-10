@@ -1,4 +1,4 @@
-# Copyright (C) 2016 The JDCTeam
+# Copyright (C) 2017 Atomic-OS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,33 +12,33 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include vendor/aosp/config/version.mk
+include vendor/aos/config/version.mk
 
-PRODUCT_BRAND ?= JDCTeam
+PRODUCT_BRAND ?= Atomic-OS
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/aosp/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/aosp/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
+    vendor/aos/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/aos/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/aos/prebuilt/common/bin/50-base.sh:system/addon.d/50-base.sh \
 
 # Bootanimation
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+    vendor/aos/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
 # SuperSU
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/magisk/Magisk.zip:install/magisk/Magisk.zip
+    vendor/aos/prebuilt/common/magisk/Magisk.zip:install/magisk/Magisk.zip
 
 DEVICE_PACKAGE_OVERLAYS += \
-    vendor/aosp/overlay/common \
-    vendor/aosp/overlay/dictionaries
+    vendor/aos/overlay/common \
+    vendor/aos/overlay/dictionaries
 
 # EXT4/F2FS format script
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/bin/format.sh:install/bin/format.sh
+    vendor/aos/prebuilt/common/bin/format.sh:install/bin/format.sh
 
-# Custom JDCTeam packages
+# Custom AOS packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
     LatinIME \
@@ -46,7 +46,6 @@ PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
     MagiskManager \
-    OTAUpdates \
     Stk \
     Substratum \
     ThemeInterfacer \
@@ -83,33 +82,33 @@ PRODUCT_PACKAGES += \
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
-    vendor/aosp/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+    vendor/aos/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
     
 # For keyboard gesture typing
 ifneq ($(filter jflte,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinime.so
+    vendor/aos/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinime.so
 else
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinime.so
+    vendor/aos/prebuilt/common/lib64/libjni_latinimegoogle.so:system/lib64/libjni_latinime.so
 endif
     
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/aosp/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/aos/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/aos/prebuilt/common/bin/sysinit:system/bin/sysinit
 
-# JDC-specific init file
+# AOS-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/etc/init.local.rc:root/init.jdc.rc
-
-# Copy over added mimetype supported in libcore.net.MimeUtils
-PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
+    vendor/aos/prebuilt/common/etc/init.local.rc:root/init.aos.rc
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
+    vendor/aos/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
+
+# Copy over added mimetype supported in libcore.net.MimeUtils
+PRODUCT_COPY_FILES += \
+    vendor/aos/prebuilt/common/lib/content-types.properties:system/lib/content-types.properties
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -121,7 +120,7 @@ PRODUCT_COPY_FILES += \
 
 # Prebuilt ConsumerIR
 PRODUCT_COPY_FILES += \
-    vendor/aosp/prebuilt/common/lib/hw/consumerir.msm8960.old:system/lib/hw/consumerir.msm8960.old
+    vendor/aos/prebuilt/common/lib/hw/consumerir.msm8960.old:system/lib/hw/consumerir.msm8960.old
     
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
@@ -131,7 +130,7 @@ PRODUCT_PACKAGES += \
 
 # Changelog
 PRODUCT_COPY_FILES += \
-    vendor/aosp/Changelog.md:system/etc/Changelog.md
+    vendor/aos/Changelog.md:system/etc/Changelog.md
 
 # Needed by some RILs and for some gApps packages
 PRODUCT_PACKAGES += \

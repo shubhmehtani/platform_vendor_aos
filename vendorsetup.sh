@@ -1,8 +1,4 @@
-add_lunch_combo jdc_jflte-user
-add_lunch_combo jdc_jflte-userdebug
-add_lunch_combo jdc_gemini-user
-add_lunch_combo jdc_gemini-userdebug
-add_lunch_combo jdc_h850-user
-add_lunch_combo jdc_h850-userdebug
-add_lunch_combo jdc_oneplus2-user
-add_lunch_combo jdc_oneplus2-userdebug
+for device in $(cat vendor/aos/aos.devices)
+do
+add_lunch_combo aos_$device-userdebug
+done

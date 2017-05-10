@@ -1,6 +1,6 @@
-# Inherit common AOSP stuff
-$(call inherit-product, vendor/aosp/config/common.mk)
+# Inherit common AOS stuff
+$(call inherit-product, vendor/aos/config/common.mk)
 
-$(call inherit-product, vendor/aosp/config/telephony.mk)
+$(call inherit-product, vendor/aos/config/telephony.mk)
 
-$(call inherit-product, vendor/aosp/config/jdc_props.mk)
+$(call inherit-product, vendor/aos/config/aos_props.mk)

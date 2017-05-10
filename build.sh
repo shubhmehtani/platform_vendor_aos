@@ -1,11 +1,8 @@
 #! /bin/bash
-
-#      _____  __________      
-#  __ / / _ \/ ___/_  _/__ ___ ___ _
-# / // / // / /__  / // -_) _ `/  ' \ 
-# \___/____/\___/ /_/ \__/\_,_/_/_/_/ 
+ 
 #
 # Copyright 2016 JDCTeam
+# Copyright 2017 Atomic-OS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,7 +17,7 @@
 # limitations under the License.
 
 
-TEAM_NAME="jdc"
+TEAM_NAME="aos"
 TARGET=jflte
 VARIANT=userdebug
 AOSP_VER=7.0
@@ -63,12 +60,12 @@ deepClean() {
 }
 
 rename() {
-	cp -r "$OUT"/jdc_jflte-ota-eng* $(pwd)
+	cp -r "$OUT"/aos_jflte-ota-eng* $(pwd)
 	if [ "$UNIFIED" == "true" ]; then
-		mv jdc_jflte-ota-eng* "$FILENAME2".zip
+		mv aos_jflte-ota-eng* "$FILENAME2".zip
 		md5sum "$FILENAME2".zip > "$FILENAME2".zip.md5
 	else
-		mv jdc_jflte-ota-eng* "$FILENAME".zip
+		mv aos_jflte-ota-eng* "$FILENAME".zip
 		md5sum "$FILENAME".zip > "$FILENAME".zip.md5
 	fi
 	

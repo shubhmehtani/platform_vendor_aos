@@ -1,8 +1,4 @@
-# JDCTeam AOSP vendor configuration
-
-By AntaresOne and -+BB+-
-
-Copyright (c) 2015-2017, Jflte DevConnection Team
+# Atomic-OS --AOS-- vendor configuration
 
 Copyrights (c) 2015, The CyanogenMod Project
-
+Copyrights (c) 2017, Atomic-OS

@@ -1,7 +1,7 @@
 #
 # This policy configuration will be used by all products that
-# inherit from CM
+# inherit from AOS
 #
 
 BOARD_SEPOLICY_DIRS += \
-    vendor/aosp/sepolicy
+    vendor/aos/sepolicy
