@@ -1,2 +1,3 @@
-allow domain persist_file:dir getattr;
-allow domain persist_block_device:blk_file getattr;
+allow domain block_device:blk_file getattr;
+allow domain cache_block_device:blk_file getattr;
+allow domain userdata_block_device:blk_file getattr;
