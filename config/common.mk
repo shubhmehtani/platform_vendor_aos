@@ -47,7 +47,6 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     MagiskManager \
     Stk \
-    Substratum \
     ThemeInterfacer \
     Turbo
 
