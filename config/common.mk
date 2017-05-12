@@ -62,8 +62,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Development \
     SpareParts \
-    LockClock \
-    su
+    LockClock
 
 # Optional packages
 PRODUCT_PACKAGES += \
