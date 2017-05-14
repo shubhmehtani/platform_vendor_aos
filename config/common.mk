@@ -34,10 +34,6 @@ DEVICE_PACKAGE_OVERLAYS += \
     vendor/aos/overlay/common \
     vendor/aos/overlay/dictionaries
 
-# EXT4/F2FS format script
-PRODUCT_COPY_FILES += \
-    vendor/aos/prebuilt/common/bin/format.sh:install/bin/format.sh
-
 # Custom AOS packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
