@@ -45,7 +45,8 @@ PRODUCT_PACKAGES += \
     Stk \
     ThemeInterfacer \
     Turbo \
-    ViaBrowser
+    ViaBrowser \
+    Amaze
 
 # Extra tools
 PRODUCT_PACKAGES += \
