@@ -44,7 +44,8 @@ PRODUCT_PACKAGES += \
     MagiskManager \
     Stk \
     ThemeInterfacer \
-    Turbo
+    Turbo \
+    ViaBrowser
 
 # Extra tools
 PRODUCT_PACKAGES += \
