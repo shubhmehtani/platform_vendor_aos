@@ -26,9 +26,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/aos/prebuilt/common/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 
-# SuperSU
-PRODUCT_COPY_FILES += \
-    vendor/aos/prebuilt/common/magisk/Magisk.zip:install/magisk/Magisk.zip
 
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/aos/overlay/common \
@@ -41,7 +38,6 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     LiveWallpapers \
     LiveWallpapersPicker \
-    MagiskManager \
     Stk \
     ThemeInterfacer \
     Turbo \
@@ -141,3 +137,15 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     org.dirtyunicorns.utils
+
+
+# Magisk
+ifeq ($(WITH_ROOT),true)
+ PRODUCT_COPY_FILES += \
+    vendor/aos/prebuilt/common/magisk/Magisk.zip:system/addon.d/magisk.zip
+
+ PRODUCT_PACKAGES += \
+    MagiskManager
+else
+$(warning Root method is undefined, please use 'WITH_ROOT := true' to define it)
+endif
