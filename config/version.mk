@@ -17,17 +17,20 @@
 #Atomic-OS Versioning
 AOS_VERSION = v1.0
 
+ifndef AOS_BUILD_TYPE
+    AOS_BUILD_TYPE := UNSUPPORTED
+    PLATFORM_VERSION_CODENAME := UNSUPPORTED
+endif
+
 ifneq ($(AOS_BUILD_TYPE),)
 AOS_MOD_VERSION := Atomic-OS-$(AOS_VERSION)-$(shell date -u +%Y%m%d-%H%M)-$(AOS_BUILD_TYPE)
-else
-AOS_MOD_VERSION := Atomic-OS-$(AOS_VERSION)-$(shell date -u +%Y%m%d-%H%M)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.aos.version=$(AOS_VERSION) \
   ro.aos.releasetype=$(AOS_BUILD_TYPE) \
   ro.mod.version=$(AOS_BUILD_TYPE)-$(AOS_VERSION)
-  
+
 AOS_DISPLAY_VERSION := $(AOS_MOD_VERSION)
 
 PRODUCT_PROPERTY_OVERRIDES += \
