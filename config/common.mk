@@ -149,6 +149,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     org.dirtyunicorns.utils
 
+# Recommend using the non debug dexpreopter
+USE_DEX2OAT_DEBUG ?= false
 
 # Magisk
 ifeq ($(WITH_ROOT),true)
