@@ -133,6 +133,7 @@ PRODUCT_PACKAGES += \
 # DSP
 ifeq ($(WITH_DSPMANAGER), true)
 PRODUCT_PACKAGES += \
+    MusicFX \
     libcyanogen-dsp \
     audio_effects.conf
 else
