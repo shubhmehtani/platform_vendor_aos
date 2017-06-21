@@ -86,8 +86,7 @@ endif
     
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/aos/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/aos/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/aos/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner
 
 # AOS-specific init file
 PRODUCT_COPY_FILES += \
