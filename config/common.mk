@@ -129,8 +129,6 @@ ifeq ($(WITH_ROOT),true)
  PRODUCT_COPY_FILES += \
     vendor/aos/prebuilt/common/addon.d/magisk.zip:system/addon.d/magisk.zip
 
- PRODUCT_PACKAGES += \
-    MagiskManager
 else
 $(warning Root method is undefined, please use 'WITH_ROOT := true' to define it)
 endif
