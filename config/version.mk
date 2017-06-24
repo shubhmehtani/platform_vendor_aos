@@ -26,7 +26,7 @@ ifndef AOS_BUILD_TYPE
     AOS_BUILD_TYPE := UNSUPPORTED
 endif
 
-AOS_MOD_VERSION := Atomic-OS-$(AOS_VERSION)-$(shell date -u +%Y%m%d-%H%M)-$(AOS_BUILD_TYPE)
+AOS_MOD_VERSION := Atomic-OS-$(AOS_VERSION)-$(AOS_BUILD)-$(shell date -u +%Y%m%d-%H%M)-$(AOS_BUILD_TYPE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
   ro.aos.version=$(AOS_VERSION) \
