@@ -115,10 +115,6 @@ PRODUCT_PACKAGES += \
     libffmpeg_omx \
     media_codecs_ffmpeg.xml
 
-# Changelog
-PRODUCT_COPY_FILES += \
-    vendor/aos/Changelog.md:system/etc/Changelog.md
-
 # Needed by some RILs and for some gApps packages
 PRODUCT_PACKAGES += \
     librsjni \
