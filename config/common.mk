@@ -40,7 +40,8 @@ PRODUCT_PACKAGES += \
     ThemeInterfacer \
     Turbo \
     ViaBrowser \
-    Amaze
+    Amaze \
+    DarknessHub
 
 # Extra tools
 PRODUCT_PACKAGES += \
