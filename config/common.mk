@@ -82,7 +82,8 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     Retro \
     Turbo \
-    Launcher3
+    Launcher3 \
+    DarknessHub
 
 # Themes
 PRODUCT_PACKAGES += \
