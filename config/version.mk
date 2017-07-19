@@ -17,13 +17,13 @@
 #Atomic-OS Versioning
 AOS_VERSION = v1.0
 
-ifeq ($(AOS_BUILD_TYPE), SUPPORTED)
+ifeq ($(filter-out atomicity weekly,$(AOS_BUILD_TYPE)),)
  PRODUCT_PACKAGES += \
      AtomicOTA
 endif
 
 ifndef AOS_BUILD_TYPE
-    AOS_BUILD_TYPE := UNSUPPORTED
+    AOS_BUILD_TYPE := LabMade
 endif
 
 AOS_MOD_VERSION := Atomic-OS-$(AOS_VERSION)-$(AOS_BUILD)-$(shell date -u +%Y%m%d-%H%M)-$(AOS_BUILD_TYPE)
