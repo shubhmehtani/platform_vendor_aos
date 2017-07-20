@@ -122,23 +122,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images
 
-# DSP
-ifeq ($(WITH_DSPMANAGER), true)
-PRODUCT_PACKAGES += \
-    MusicFX \
-    libcyanogen-dsp \
-    audio_effects.conf
-else
-$(warning you are not using dsp manager, please use 'WITH_DSPMANAGER := true' to define it)
-endif
-
-# AudioFX
-ifeq ($(WITH_AUDIOFX), true)
-PRODUCT_PACKAGES += \
-    AudioFX
-else
-$(warning you are not using audiofx, please use 'WITH_AUDIOFX := true' to define it)
-endif
 
 # DU Utils Library
 PRODUCT_PACKAGES += \
