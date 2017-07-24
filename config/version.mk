@@ -15,7 +15,7 @@
 # limitations under the License.
 
 #Atomic-OS Versioning
-AOS_VERSION = v1.0
+AOS_VERSION = 1.0
 
 ifeq ($(filter-out atomicity weekly,$(AOS_BUILD_TYPE)),)
  PRODUCT_PACKAGES += \
