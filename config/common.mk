@@ -41,7 +41,8 @@ PRODUCT_PACKAGES += \
     Turbo \
     ViaBrowser \
     MiXplorer \
-    DarknessHub
+    DarknessHub \
+    SoundRecorder
 
 # Extra tools
 PRODUCT_PACKAGES += \
