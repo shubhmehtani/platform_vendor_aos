@@ -6,7 +6,7 @@
 echo -e "";
 echo -e "";
 echo -e "";
-echo -e 1- atomicity
+echo -e 1- alchemy
 echo -e "";
 echo -e 2- weekly
 echo -e "";
@@ -15,8 +15,8 @@ $normal
 read askvariant
 if [ "$askvariant" == "1" ]
 then echo -e "";
-echo -e ▪Building atomicity
-export AOS_BUILD_TYPE=atomicity
+echo -e ▪Building alchemy
+export AOS_BUILD_TYPE=alchemy
 echo -e "";
 echo -e "";
 fi
