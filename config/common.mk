@@ -95,6 +95,11 @@ PRODUCT_PACKAGES += \
     Turbo \
     Launcher3
 
+# Themes
+PRODUCT_PACKAGES += \
+    PixelTheme \
+    Stock
+
 # Extra tools
 PRODUCT_PACKAGES += \
     openvpn \
