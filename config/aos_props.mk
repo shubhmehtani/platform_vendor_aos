@@ -28,4 +28,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.sf.omx-plugin=libffmpeg_omx.so \
     media.sf.extractor-plugin=libffmpeg_extractor.so \
     ro.storage_manager.enabled=true \
-    ro.boot.vendor.overlay.theme=com.google.android.theme.pixel
+    ro.boot.vendor.overlay.theme=com.google.android.theme.pixel \
+    persist.sys.disable_rescue=true
