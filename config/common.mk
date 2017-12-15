@@ -128,27 +128,13 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PACKAGES += \
 #    org.dirtyunicorns.utils
 
-#ifeq ($(DEFAULT_ROOT_METHOD),magisk)
 # Magisk Manager
-#PRODUCT_PACKAGES += \
-#    MagiskManager
+PRODUCT_PACKAGES += \
+    MagiskManager
 
 # Magisk
-#PRODUCT_COPY_FILES += \
-#   vendor/aos/prebuilt/common/addon.d/magisk.zip:system/addon.d/magisk.zip
-#endif
-
-#ifeq ($(DEFAULT_ROOT_METHOD),supersu)
-# SuperSU
-#PRODUCT_COPY_FILES += \
-#   vendor/aos/prebuilt/common/etc/UPDATE-SuperSU.zip:system/addon.d/UPDATE-SuperSU.zip \
-#   vendor/aos/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
-#endif
-
-# Explict rootless defined, or none of the root methods defined,
-# default rootless : nothing todo
-#ifeq ($(DEFAULT_ROOT_METHOD),rootless)
-#endif
+PRODUCT_COPY_FILES += \
+   vendor/aos/prebuilt/common/addon.d/magisk.zip:system/addon.d/magisk.zip
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
