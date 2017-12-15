@@ -86,12 +86,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AudioFX
 
-# Extra Optional packages
+# Extra AOS packages
 PRODUCT_PACKAGES += \
     Calculator \
     LatinIME \
     BluetoothExt \
-    Retro
+    Retro \
+    Turbo \
+    Launcher3
 
 # Extra tools
 PRODUCT_PACKAGES += \
