@@ -1,21 +1,7 @@
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-
-ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=android-google
-else
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
-endif
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    keyguard.no_require_sim=true
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
-
 # Inherit common AOS stuff
 $(call inherit-product, vendor/aos/config/telephony.mk)
+
+$(call inherit-product, vendor/aos/config/aos_props.mk)
 
 # Disable excessive dalvik debug messages
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -154,14 +140,6 @@ PRODUCT_PACKAGES += \
     libffmpeg_extractor \
     libffmpeg_omx \
     media_codecs_ffmpeg.xml
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.sf.omx-plugin=libffmpeg_omx.so \
-    media.sf.extractor-plugin=libffmpeg_extractor.so
-
-# Storage manager
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.storage_manager.enabled=true
 
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
