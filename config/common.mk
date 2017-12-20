@@ -19,10 +19,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/aos/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
-# BT config
-PRODUCT_COPY_FILES += \
-    system/bluetooth/data/main.nonsmartphone.conf:system/etc/bluetooth/main.conf
-
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
     vendor/aos/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
