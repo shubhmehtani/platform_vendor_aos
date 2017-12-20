@@ -1,3 +1,9 @@
+# Telephony packages
+PRODUCT_PACKAGES += \
+    messaging \
+    Stk \
+    CellBroadcastReceiver
+
 # World APN list
 PRODUCT_COPY_FILES += \
     vendor/aos/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
@@ -5,4 +11,3 @@ PRODUCT_COPY_FILES += \
 # Selective SPN list for operator number who has the problem.
 PRODUCT_COPY_FILES += \
     vendor/aos/prebuilt/common/etc/selective-spn-conf.xml:system/etc/selective-spn-conf.xml
-

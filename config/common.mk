@@ -14,6 +14,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
+# Inherit common AOS stuff
+$(call inherit-product, vendor/aos/config/telephony.mk)
+
 # Disable excessive dalvik debug messages
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.debug.alloc=0
@@ -27,6 +30,10 @@ PRODUCT_COPY_FILES += \
 # Backup services whitelist
 PRODUCT_COPY_FILES += \
     vendor/aos/config/permissions/backup.xml:system/etc/sysconfig/backup.xml
+
+# BT config
+PRODUCT_COPY_FILES += \
+    system/bluetooth/data/main.nonsmartphone.conf:system/etc/bluetooth/main.conf
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
@@ -65,7 +72,6 @@ PRODUCT_COPY_FILES += \
 
 # Required packages
 PRODUCT_PACKAGES += \
-    CellBroadcastReceiver \
     Development \
     SpareParts \
     LockClock \
