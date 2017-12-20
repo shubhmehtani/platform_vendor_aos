@@ -3,6 +3,8 @@ $(call inherit-product, vendor/aos/config/telephony.mk)
 
 $(call inherit-product, vendor/aos/config/aos_props.mk)
 
+$(call inherit-product, vendor/aos/config/version.mk)
+
 # Disable excessive dalvik debug messages
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.debug.alloc=0
@@ -148,30 +150,5 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/aos/overlay/common
 
  # Bootanimation
 $(call inherit-product, vendor/aos/prebuilt/common/bootanimation/bootanimation.mk)
-
-# Versioning System
-# aos first version.
-PRODUCT_VERSION_MAJOR = 0.1
-PRODUCT_VERSION_MINOR = Trial
-PRODUCT_VERSION_MAINTENANCE = 1.0
-AOS_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
-ifdef AOS_BUILD_EXTRA
-    AOS_POSTFIX := -$(AOS_BUILD_EXTRA)
-endif
-
-ifndef AOS_BUILD_TYPE
-    AOS_BUILD_TYPE := UNOFFICIAL
-endif
-
-# Set all versions
-AOS_VERSION := Aos-$(AOS_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(AOS_BUILD_TYPE)$(AOS_POSTFIX)
-AOS_MOD_VERSION := Aos-$(AOS_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(AOS_BUILD_TYPE)$(AOS_POSTFIX)
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    BUILD_DISPLAY_ID=$(BUILD_ID) \
-    aos.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
-    ro.aos.version=$(AOS_VERSION) \
-    ro.modversion=$(AOS_MOD_VERSION) \
-    ro.aos.buildtype=$(AOS_BUILD_TYPE)
 
 EXTENDED_POST_PROCESS_PROPS := vendor/aos/tools/aos_process_props.py
