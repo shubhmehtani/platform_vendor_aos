@@ -83,7 +83,8 @@ PRODUCT_PACKAGES += \
     Retro \
     Turbo \
     Launcher3 \
-    DarknessHub
+    DarknessHub \
+    GodlyTorch
 
 # Themes
 PRODUCT_PACKAGES += \
