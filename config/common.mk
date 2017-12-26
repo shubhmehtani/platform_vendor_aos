@@ -56,7 +56,6 @@ PRODUCT_COPY_FILES += \
 
 # Required packages
 PRODUCT_PACKAGES += \
-    Development \
     SpareParts \
     LockClock
 
@@ -70,10 +69,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     librsjni
-
-# AudioFX
-PRODUCT_PACKAGES += \
-    AudioFX
 
 # Extra AOS packages
 PRODUCT_PACKAGES += \
