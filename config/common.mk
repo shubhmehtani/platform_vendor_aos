@@ -51,8 +51,7 @@ PRODUCT_COPY_FILES +=  \
 # Aos-specific startup services
 PRODUCT_COPY_FILES += \
     vendor/aos/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/aos/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
-    vendor/aos/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/aos/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 
 # Required packages
 PRODUCT_PACKAGES += \
