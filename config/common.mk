@@ -5,10 +5,6 @@ $(call inherit-product, vendor/aos/config/aos_props.mk)
 
 $(call inherit-product, vendor/aos/config/version.mk)
 
-# Disable excessive dalvik debug messages
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.debug.alloc=0
-
 # Backup tool
 PRODUCT_COPY_FILES += \
     vendor/aos/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
