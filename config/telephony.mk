@@ -2,7 +2,11 @@
 PRODUCT_PACKAGES += \
     messaging \
     Stk \
-    CellBroadcastReceiver
+    CellBroadcastReceiver \
+    telephony-ext
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # World APN list
 PRODUCT_COPY_FILES += \
