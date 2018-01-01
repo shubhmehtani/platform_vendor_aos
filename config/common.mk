@@ -92,13 +92,6 @@ PRODUCT_PACKAGES += \
     ntfsfix \
     ntfs-3g
 
-# MusicFX advanced effects
-#ifneq ($(TARGET_NO_DSPMANAGER), true)
-#PRODUCT_PACKAGES += \
-#    libcyanogen-dsp \
-#    audio_effects.conf
-#endif
-
 # Custom off-mode charger
 #ifneq ($(WITH_CM_CHARGER),false)
 #PRODUCT_PACKAGES += \
@@ -115,6 +108,16 @@ PRODUCT_PACKAGES += \
 # DU Utils library
 #PRODUCT_PACKAGES += \
 #    org.dirtyunicorns.utils
+
+#MusicFX
+ifeq ($(WITH_MUSICFX),true)
+PRODUCT_PACKAGES += \
+    MusicFX \
+    audio_effects.conf \
+    libcyanogen-dsp
+else
+$(warning MusicFX is undefined, please use 'WITH_MUSICFX := true' to make a build with MusicFX.' NOTE:remove audio_effects.conf from device tree')
+endif
 
 # Stagefright FFMPEG plugin
 PRODUCT_PACKAGES += \
