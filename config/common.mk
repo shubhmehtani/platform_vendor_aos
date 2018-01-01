@@ -67,7 +67,7 @@ PRODUCT_PACKAGES += \
 
 # Extra AOS packages
 PRODUCT_PACKAGES += \
-    Calculator \
+    ExactCalculator \
     LatinIME \
     BluetoothExt \
     Retro \
