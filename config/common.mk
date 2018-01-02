@@ -10,6 +10,7 @@ PRODUCT_COPY_FILES += \
     vendor/aos/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/aos/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/aos/prebuilt/common/bin/50-aos.sh:system/addon.d/50-aos.sh
+    vendor/aos/prebuilt/common/bin/clean_cache.sh:system/bin/clean_cache.sh
 
 # Backup services whitelist
 PRODUCT_COPY_FILES += \
