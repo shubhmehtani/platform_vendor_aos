@@ -13,7 +13,7 @@
 # limitations under the License.
 
 #Atomic-OS Versioning
-AOS_VERSION = 2.x
+AOS_VERSION = 2.0
 
 #ifeq ($(filter-out atomicity alchemy weekly,$(AOS_BUILD_TYPE)),)
 # PRODUCT_PACKAGES += \
@@ -22,6 +22,10 @@ AOS_VERSION = 2.x
 
 ifndef AOS_BUILD_TYPE
     AOS_BUILD_TYPE := LabMade
+endif
+
+ifeq ($(AOS_BUILD_TYPE), OFFICIAL)
+    AOS_BUILD_TYPE := PLASMA
 endif
 
 AOS_MOD_VERSION := Atomic-OS-$(AOS_VERSION)-$(AOS_BUILD)-$(shell date -u +%Y%m%d-%H%M)-$(AOS_BUILD_TYPE)
