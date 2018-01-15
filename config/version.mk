@@ -13,7 +13,7 @@
 # limitations under the License.
 
 #Atomic-OS Versioning
-AOS_VERSION = 2.0
+AOS_VERSION = 2.1
 
 #ifeq ($(filter-out atomicity alchemy weekly,$(AOS_BUILD_TYPE)),)
 # PRODUCT_PACKAGES += \
