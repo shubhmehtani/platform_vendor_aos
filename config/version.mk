@@ -15,15 +15,17 @@
 #Atomic-OS Versioning
 AOS_VERSION = 2.1
 
-#ifeq ($(filter-out atomicity alchemy weekly,$(AOS_BUILD_TYPE)),)
-# PRODUCT_PACKAGES += \
-#     AtomicOTA
-#endif
+ifeq ($(filter-out atomicity alchemy weekly PLASMA,$(AOS_BUILD_TYPE)),)
+PRODUCT_PACKAGES += \
+     aosOTA \
+     libbypass
+endif
 
 ifndef AOS_BUILD_TYPE
     AOS_BUILD_TYPE := LabMade
 endif
 
+# Add new version name here to define on exporting build type as official
 ifeq ($(AOS_BUILD_TYPE), OFFICIAL)
     AOS_BUILD_TYPE := PLASMA
 endif
